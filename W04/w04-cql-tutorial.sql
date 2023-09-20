@@ -4,7 +4,7 @@ DROP KEYSPACE w04;
 // Create keyspace for a single node
 CREATE KEYSPACE w04 WITH REPLICATION = { 
 		  'class' : 'SimpleStrategy', 
-		  'replication_factor' : 1 
+		  'replication_factor' : 2 
 }; 
 
 // create a student table for testing
