@@ -4,7 +4,11 @@ DROP KEYSPACE w04;
 // Create keyspace for a single node
 CREATE KEYSPACE w04 WITH REPLICATION = { 
 		  'class' : 'SimpleStrategy', 
+<<<<<<< HEAD
 		  'replication_factor' : 2 
+=======
+		  'replication_factor' : 3 
+>>>>>>> de714d82546ae8128903a84c75631d0deafe4800
 }; 
 
 // create a student table for testing
@@ -26,6 +30,12 @@ INSERT INTO w04.student (student_id, f_name, l_name, course, grade)
     VALUES (201,'John', 'Jones', 'ISM6562', 97);
 INSERT INTO w04.student (student_id, f_name, l_name, course, grade)     
     VALUES (202,'Jane', 'Williams', 'ISM6562', 81);
+INSERT INTO w04.student (student_id, f_name, l_name, course, grade)     
+    VALUES (202,'Sandy', 'Williams', 'ISM6136', 86);
+INSERT INTO w04.student (student_id, f_name, l_name, course, grade)     
+    VALUES (202,'Jane', 'Hollister', 'ISM6562', 78)
+INSERT INTO w04.student (student_id, f_name, l_name, course, grade)     
+    VALUES (202,'Susan', 'Sanders', 'ISM6562', 93);
 
 // query the student table
 SELECT * from w04.student;
